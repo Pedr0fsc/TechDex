@@ -1,25 +1,29 @@
 <?php
+include "../models/usuario.php";
 
-    include "../core/Conexao.php";
+$nome = $_POST["nome"] ?? "";
+$email = $_POST["email"] ?? "";
+$senha = $_POST["senha"] ?? "";
 
-    $nome = $_POST["nome"];
-    $email = $_POST["email"];
-    $senha = $_POST["senha"];
+if ($nome && $email && $senha) {
+    $resultado = cadastrar_usuario($nome, $email, $senha);
 
-    $stmt = mysqli_stmt_init($conection);
-    $query = "INSERT INTO usuario(nome, email, senha) VALUES (?,?,?)";
-    mysqli_stmt_prepare($stmt, $query);
-    mysqli_stmt_bind_param($stmt,"sss", $nome, $email, $senha);
-    $resultado = mysqli_stmt_execute($stmt);
-
-    if($resultado == True){
-        $retorno_cadastro["status"] = "s";
-        $retorno_cadastro["mensagem"] = "Cadastrado com sucesso!";
+    if ($resultado) {
+        $retorno = [
+            "status" => "s",
+            "mensagem" => "Cadastrado com sucesso!"
+        ];
     } else {
-        $retorno_cadastro["status"] = "n";
-        $retorno_cadastro["mensagem"] = "Falha ao cadastrar!";
+        $retorno = [
+            "status" => "n",
+            "mensagem" => "Falha ao cadastrar!"
+        ];
     }
+} else {
+    $retorno = [
+        "status" => "n",
+        "mensagem" => "Preencha todos os campos!"
+    ];
+}
 
-    echo json_encode($retorno_cadastro);
-
-?>
+echo json_encode($retorno);

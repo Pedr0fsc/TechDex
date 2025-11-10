@@ -7,7 +7,7 @@
     <title>Sign Up</title>
 
     <link rel="stylesheet" href="/TechDex/public/assets/css/style.css">
-    <script src="/TechDex/public/assets/js/script.js"></script>
+    <script src="/TechDex/public/assets/js/script.js" defer></script>
 
 </head>
 
@@ -19,8 +19,8 @@
 
     <form id="form-cadastro">
         <input type="text" name="nome" placeholder="Nome" /><br>
-        <input type="email" name="email" placeholder="E-mail" /> <br>
-        <input type="password" name="senha" placeholder="Senha" /> <br>
+        <input type="email" name="email" placeholder="E-mail" /><br>
+        <input type="password" name="senha" placeholder="Senha" /><br>
         <button type="button" onclick="cadastrar()"> Cadastrar </button>
     </form>
 

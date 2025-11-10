@@ -1,20 +1,21 @@
-async function cadastrar(){
+async function cadastrar() {
+    const form = document.getElementById("form-cadastro");
+    const form_data = new FormData(form);
 
-    var form = document.getElementById("form-cadastro");
-    var form_data = new FormData(form);
-
-    var retorno = await fetch("/TechDex/app/controllers/CadastroController.php", {
+    const resposta = await fetch("/TechDex/app/controllers/CadastroController.php", {
         method: "POST",
         body: form_data
     });
 
-    var data_retorno = await retorno.json();
+    const dados = await resposta.json();
+    const campo_retorno = document.getElementById("campo_retorno");
 
-    var campo_retorno = document.getElementById("campo_retorno");
-
-    if (dados.status === "Entrou") {
-        window.location.href = "../principal/index.html";
+    if (dados.status === "s") {
+        campo_retorno.textContent = dados.mensagem;
+        campo_retorno.style.color = "green";
+        form.reset();
     } else {
         campo_retorno.textContent = dados.mensagem;
+        campo_retorno.style.color = "red";
     }
 }
