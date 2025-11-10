@@ -12,21 +12,26 @@
 </head>
 
 <body>
+    <div class="body_container">
+        <div class="header_partial">
+            <?php include "./partials/header.php"; ?>
+        </div>
+        <div class="form_content">
+            <h2>Sign Up</h2>
 
-    <?php include "./partials/header.php"; ?>
+            <form id="form-cadastro" class="form_inputs">
+                <input type="text" name="nome" placeholder="Nome" /><br>
+                <input type="email" name="email" placeholder="E-mail" /><br>
+                <input type="password" name="senha" placeholder="Senha" /><br>
+                <button type="button" onclick="cadastrar()"> Cadastrar </button>
+            </form>
 
-    <h2>Sign Up</h2>
-
-    <form id="form-cadastro">
-        <input type="text" name="nome" placeholder="Nome" /><br>
-        <input type="email" name="email" placeholder="E-mail" /><br>
-        <input type="password" name="senha" placeholder="Senha" /><br>
-        <button type="button" onclick="cadastrar()"> Cadastrar </button>
-    </form>
-
-    <p id="campo_retorno"></p>
-
-    <?php include "./partials/footer.php"; ?>
+            <p id="campo_retorno"></p>
+        </div>
+        <div class="footer_partial">
+            <?php include "./partials/footer.php"; ?>
+        </div>
+    </div>
 
 </body>
 

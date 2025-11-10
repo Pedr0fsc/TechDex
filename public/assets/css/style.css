@@ -2,3 +2,30 @@
     margin: 0;
     padding: 0;
 }
+
+.body_container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.form_content{
+    margin: 5rem;
+    padding: 1rem;
+}
+
+.form_inputs{
+    gap: 0.5rem;
+    background-color: aliceblue;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.form_inputs input{
+    width: 4rem;
+    height: 1rem;
+}
+
+.form_inputs input:hover{
+    color: red;
+}
