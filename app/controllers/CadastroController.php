@@ -2,11 +2,12 @@
 include "../models/usuario.php";
 
 $nome = $_POST["nome"] ?? "";
+$username = $_POST["username"] ?? "";
 $email = $_POST["email"] ?? "";
 $senha = $_POST["senha"] ?? "";
 
-if ($nome && $email && $senha) {
-    $resultado = cadastrar_usuario($nome, $email, $senha);
+if ($nome && $username && $email && $senha) {
+    $resultado = cadastrar_usuario($nome, $username, $email, $senha);
 
     if ($resultado) {
         $retorno = [

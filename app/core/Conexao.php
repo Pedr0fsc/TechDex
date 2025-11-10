@@ -2,7 +2,7 @@
 $host = "localhost:3306";
 $user = "root";
 $pass = "TuffoPirata2007";
-$dbname = "bdprogweb";
+$dbname = "techdex";
 
 $conection = mysqli_connect($host, $user, $pass, $dbname);
 

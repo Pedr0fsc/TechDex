@@ -21,6 +21,7 @@
 
             <form id="form-cadastro" class="form_inputs">
                 <input type="text" name="nome" placeholder="Nome" /><br>
+                <input type="text" name="username" placeholder="Username" /><br>
                 <input type="email" name="email" placeholder="E-mail" /><br>
                 <input type="password" name="senha" placeholder="Senha" /><br>
                 <button type="button" onclick="cadastrar()"> Cadastrar </button>
