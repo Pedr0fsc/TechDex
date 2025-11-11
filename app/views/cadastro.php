@@ -13,9 +13,6 @@
 
 <body>
     <div class="container">
-        <div class="header_partial">
-            <?php include "./partials/header.php"; ?>
-        </div>
         <div class="card">
             <h2>Sign Up</h2>
 
@@ -37,9 +34,6 @@
             </form>
 
             <p id="cadastro_retorno"></p>
-        </div>
-        <div class="footer_partial">
-            <?php include "./partials/footer.php"; ?>
         </div>
     </div>
 
