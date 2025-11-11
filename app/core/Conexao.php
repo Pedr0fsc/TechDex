@@ -1,7 +1,7 @@
 <?php
 $host = "localhost:3306";
-$user = "";
-$pass = "";
+$user = "root";
+$pass = "TuffoPirata2007";
 $dbname = "techdex";
 
 $conection = mysqli_connect($host, $user, $pass, $dbname);

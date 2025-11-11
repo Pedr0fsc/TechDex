@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #1E0028;
+    background: linear-gradient(135deg, rgba(30, 0, 40, 1) 38%, rgba(106, 7, 163, 1) 76%);
+    min-height: 100vh;
+    color: #fff;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 20px 100px;
+}
+
+.header-logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-logo i {
+    font-size: 32px;
+    color: #ffde4d;
+}
+
+.header-logo p {
+    font-size: 28px;
+    color: #ffde4d;
+    font-weight: 800;
+}
+
+.header-login {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-login p {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+.header-login i {
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.header-login i:hover {
+    color: #ffde4d;
+}
+
+.botao {
+    height: 41px;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 14px;
+    transition: all 0.3s;
+    backdrop-filter: blur(10px);
+}
+
+.botao:hover {
+    background: linear-gradient(to right, #ffd000, #ffa127);
+    color: #000;
+    transform: translateY(-2px);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.principal {
+    margin: 40px 100px;
+}
+
+.principal-barra-pesquisa {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.principal-barra-pesquisa-botoes {
+    display: flex;
+    gap: 15px;
+}
+
+.principal input {
+    width: 100%;
+    height: 45px;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 14px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s;
+}
+
+
+.principal input:focus {
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 0 2px rgba(255, 222, 77, 0.3);
+}
+
+.principal-itens-cabecario {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+.principal-itens-cabecario span {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.itens {
+    background: rgba(255, 255, 255, 0.08);
+    width: 300px;
+    padding: 20px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.itens:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.itens p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.itens p:first-child {
+    font-size: 20px;
+    font-weight: 600;
+    opacity: 1;
+    color: #ffde4d;
+}
+.salvar{
+    width: 100px;
+    height: 41px;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 14px;
+    transition: all 0.3s;
+    backdrop-filter: blur(10px);
+    position: relative;
+    top: -42px;
+    right: -170px;
+
+
+}
+.salvar:hover{
+    background: linear-gradient(to right, #ffd000, #ffa127);
+    color: #000;
+    transform: translateY(-2px);
+
+}
+#lista{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+#list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+footer {
+    padding: 40px 100px;
+}

@@ -35,7 +35,7 @@ async function entrar() {
     var campo_retorno = document.getElementById("login_retorno");
 
     if (dados.status === "s") {
-        window.location.href = "/TechDex/index.php";
+        window.location.href = "/TechDex/app/views/home.php";
     } else {
         campo_retorno.textContent = dados.mensagem;
     }
