@@ -3,29 +3,108 @@
     padding: 0;
 }
 
-.body_container{
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #1E0028;
+    background: linear-gradient(135deg,rgba(30, 0, 40, 1) 38%, rgba(106, 7, 163, 1) 76%);
+    height: 100vh;
     display: flex;
     justify-content: center;
-    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    overflow: hidden;
 }
 
-.form_content{
-    margin: 5rem;
-    padding: 1rem;
+.container {
+    display: flex;
+    gap: 80px;
 }
 
-.form_inputs{
-    gap: 0.5rem;
-    background-color: aliceblue;
-    border-radius: 5px;
-    border: 1px solid black;
+.welcome-card {
+    max-width: 300px;
 }
 
-.form_inputs input{
-    width: 4rem;
-    height: 1rem;
+.welcome-card h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
 }
 
-.form_inputs input:hover{
-    color: red;
+.welcome-card p {
+    font-size: 18px;
+    opacity: 0.7;
+}
+
+.welcome-card button {
+    margin-top: 20px;
+    height: 41px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background: #ffde4d;
+    color: black;
+    cursor: pointer;
+}
+
+.welcome-card button:hover {
+    background: #ffd11a;
+}
+
+.card h2 {
+    font-size: 30px;
+    margin-bottom: 2rem;
+}
+
+.card {
+    width: 330px;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 35px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+
+input {
+    width: 100%;
+    height: 45px;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    margin-top: 8px;
+    margin-bottom: 19px;
+    border-radius: 20px; 
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+}
+
+
+button.submit {
+    width: 100%;
+    height: 45px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    background: linear-gradient(to right, #ffd000, #ffa127);
+    color: black;
+    box-sizing: border-box;
+}
+
+button.submit:hover {
+    background: linear-gradient(to right, #ffa127, #ffbb00);
+}
+
+.card p {
+    margin-top: 1rem;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 14px;
+}
+a:hover {
+    text-decoration: underline;
 }

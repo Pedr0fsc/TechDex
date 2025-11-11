@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
+    <title>TechDex | Sign Up</title>
 
     <link rel="stylesheet" href="/TechDex/public/assets/css/style.css">
     <script src="/TechDex/public/assets/js/script.js" defer></script>
@@ -12,22 +12,31 @@
 </head>
 
 <body>
-    <div class="body_container">
+    <div class="container">
         <div class="header_partial">
             <?php include "./partials/header.php"; ?>
         </div>
-        <div class="form_content">
+        <div class="card">
             <h2>Sign Up</h2>
 
-            <form id="form-cadastro" class="form_inputs">
+            <form id="form-cadastro" class="form">
+
+                <label>Nome</label>
                 <input type="text" name="nome" placeholder="Nome" /><br>
+
+                <label>Nome de usuário</label>
                 <input type="text" name="username" placeholder="Username" /><br>
+
+                <label>Email</label>
                 <input type="email" name="email" placeholder="E-mail" /><br>
+
+                <label>Senha</label>
                 <input type="password" name="senha" placeholder="Senha" /><br>
-                <button type="button" onclick="cadastrar()"> Cadastrar </button>
+
+                <button type="button" class="submit" onclick="cadastrar()"> Cadastrar </button>
             </form>
 
-            <p id="campo_retorno"></p>
+            <p id="cadastro_retorno"></p>
         </div>
         <div class="footer_partial">
             <?php include "./partials/footer.php"; ?>

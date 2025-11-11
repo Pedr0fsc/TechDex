@@ -28,3 +28,4 @@ if ($nome && $username && $email && $senha) {
 }
 
 echo json_encode($retorno);
+?>

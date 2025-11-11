@@ -8,7 +8,7 @@ async function cadastrar() {
     });
 
     const dados = await resposta.json();
-    const campo_retorno = document.getElementById("campo_retorno");
+    const campo_retorno = document.getElementById("cadastro_retorno");
 
     if (dados.status === "s") {
         campo_retorno.textContent = dados.mensagem;
@@ -17,5 +17,26 @@ async function cadastrar() {
     } else {
         campo_retorno.textContent = dados.mensagem;
         campo_retorno.style.color = "red";
+    }
+}
+
+async function entrar() {
+
+    var form = document.getElementById("form-login");
+    var form_data = new FormData(form);
+
+    var retorno = await fetch("/TechDex/app/controllers/LoginController.php", {
+        method: "POST",
+        body: form_data
+    });
+
+    var dados = await retorno.json();
+
+    var campo_retorno = document.getElementById("login_retorno");
+
+    if (dados.status === "s") {
+        window.location.href = "/TechDex/index.php";
+    } else {
+        campo_retorno.textContent = dados.mensagem;
     }
 }
