@@ -67,7 +67,6 @@ function cadastrar_usuario($nome, $username, $email, $senha)
 {
     global $conection;
 
-    // hash de senha (único e irreversível)
     $senha_hash = password_hash($senha, PASSWORD_DEFAULT);
 
     $stmt = mysqli_stmt_init($conection);
@@ -81,16 +80,9 @@ function cadastrar_usuario($nome, $username, $email, $senha)
     return $resultado;
 }
 
-
-/**
- * Faz login do usuário
- */
 function entrar_usuario($username, $senha)
 {
     global $conection;
-
-    // ⚠️ Usa o mesmo hash SHA-256 do cadastro
-    $username_hash = hash('sha256', $username);
 
     $stmt = mysqli_stmt_init($conection);
     $query = "SELECT * FROM usuario WHERE username = ?";
@@ -103,7 +95,6 @@ function entrar_usuario($username, $senha)
 
     if ($usuario = mysqli_fetch_assoc($resultado)) {
         if (password_verify($senha, $usuario['senha'])) {
-            // não reexponha a senha
             unset($usuario['senha']);
             return [
                 "status" => "s",

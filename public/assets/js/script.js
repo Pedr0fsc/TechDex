@@ -40,7 +40,6 @@ async function cadastrar() {
 
     if (dados.status === "s") {
         window.location.href = "/TechDex/app/views/login.php";
-        window.location.href = "/TechDex/app/views/login.php";
     } else {
         campo_retorno.textContent = dados.mensagem;
         campo_retorno.style.color = "red";
@@ -50,6 +49,8 @@ async function cadastrar() {
 }
 // LOGIN
 async function entrar() {
+
+    console.log("Função entrar() chamada!");
     var form = document.getElementById("form-login");
     var form_data = new FormData(form);
 
