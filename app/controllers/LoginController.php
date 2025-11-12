@@ -1,8 +1,8 @@
 <?php
-include "../models/Usuario.php";
+include "../models/usuario.php";
 
-$username = $_POST["username"];
-$senha = $_POST["senha"];
+$username = trim($_POST["username"] ?? "");
+$senha = trim($_POST["senha"] ?? "");
 
 if ($username && $senha) {
     $resultado = entrar_usuario($username, $senha);
@@ -13,4 +13,3 @@ if ($username && $senha) {
         "mensagem" => "Preencha todos os campos!"
     ]);
 }
-?>
