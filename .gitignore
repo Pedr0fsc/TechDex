@@ -1,0 +1,27 @@
+# Arquivo de variáveis de ambiente
+.env
+
+# Credenciais e chaves
+*.key
+*.pem
+
+# Arquivos temporários do sistema
+*.log
+*.tmp
+*.bak
+
+# Diretórios de cache e sessão
+/vendor/
+node_modules/
+cache/
+sessions/
+
+# Arquivos gerados por IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db

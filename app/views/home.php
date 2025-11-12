@@ -1,3 +1,5 @@
+<?php include "../core/VerificarLogin.php"; ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -15,9 +17,10 @@
                 <p>TechDex</p>
             </div>
             <div class="header-login">
-                <p>usuario</p>
+                <p id="username-logged"></p>
                 <i class="fa-solid fa-user"></i>
                 <i class="fa-solid fa-right-from-bracket"><a href="/TechDex/app/views/login.php"></a></i>
+                <a href="/TechDex/app/controllers/LogoutController.php">Sair</a>
             </div>
            
     </header>
@@ -25,11 +28,8 @@
         <div class="principal-barra-pesquisa">
                 <div class="principal-barra-pesquisa-botoes">
                     <a  class="botao" href="/TechDex/app/views/itens.php">Itens</a>
-                    <a class="botao" href="/TechDex/app/views/pastas.php">Minhas pastas</a>
+                    <a class="botao" href="/TechDex/app/views/folders.php">Minhas pastas</a>
                 </div>
-            <div class="lupa">
-                <i class="fa-solid fa-magnifying-glass" style="color: #FFD43B;"></i>
-            </div>
             <input  type="text" placeholder="Buscar...">
            
         <div class="principal-itens-cabecario">

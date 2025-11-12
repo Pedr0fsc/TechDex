@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechDex</title>
-    <link rel="stylesheet" href="/TechDex/public/assets/css/style.css">
+    <link rel="stylesheet" href="/TechDex/public/assets/css/home.css">
     <link rel="stylesheet" href="/TechDex/public/assets/fonts/fontawesome-free-web/fontawesome-free-web/css/all.css">
     <script defer src="/TechDex/public/assets/js/folders.js"></script>
 </head>
@@ -18,15 +18,15 @@
             <div class="header-login">
                 <p>usuario</p>
                 <i class="fa-solid fa-user"></i>
-                <i class="fa-solid fa-right-from-bracket"><a href="../tecdex/login-base/login.html"></a></i>
+                <i class="fa-solid fa-right-from-bracket"><a href="/TechDex/app/views/login.php"></a></i>
             </div>
            
     </header>
     <div class="principal">
         <div class="principal-barra-pesquisa">
                 <div class="principal-barra-pesquisa-botoes">
-                    <a  class="botao" href="index.html">Itens</a>
-                    <a class="botao" href="pastas.html">Minhas pastas</a>
+                    <a  class="botao" href="/TechDex/app/views/itens.php">Itens</a>
+                    <a class="botao" href="/TechDex/app/views/folders.php">Minhas pastas</a>
                 </div>
             <input  type="text" placeholder="Buscar...">     
         <div class="principal-itens-cabecario">
