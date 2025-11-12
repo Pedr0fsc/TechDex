@@ -31,3 +31,4 @@ if ($texto === $descriptografado) {
 } else {
     echo "<span style='color:red;'>❌ Algo está errado — chaves, IV ou codificação incompatíveis.</span>";
 }
+?>

@@ -17,3 +17,4 @@ function carregar_env($arquivo) {
         $_SERVER[$chave] = $valor;
     }
 }
+?>

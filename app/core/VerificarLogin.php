@@ -4,3 +4,4 @@ if (!isset($_SESSION["id_user"])) {
     header("Location: /TechDex/app/views/login.php");
     exit;
 }
+?>
