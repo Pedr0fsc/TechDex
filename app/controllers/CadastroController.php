@@ -4,13 +4,13 @@ include "../models/usuario.php";
 
 global $key;
 
-$nome_enc     = $_POST["nome"] ?? "";
+$nome_enc = $_POST["nome"] ?? "";
 $username_enc = $_POST["username"] ?? "";
-$email_enc    = $_POST["email"] ?? "";
-$senha_enc    = $_POST["senha"] ?? "";
+$email_enc = $_POST["email"] ?? "";
+$senha_enc = $_POST["senha"] ?? "";
 
 if (!$nome_enc || !$username_enc || !$email_enc || !$senha_enc) {
-    echo json_encode(["status"=>"n","mensagem"=>"Preencha todos os campos!"]);
+    echo json_encode(["status" => "n", "mensagem" => "Preencha todos os campos!"]);
     exit;
 }
 
@@ -21,7 +21,7 @@ $email = decrypt_aes256cbc_js($email_enc, $key);
 $senha = decrypt_aes256cbc_js($senha_enc, $key);
 
 if ($nome === '' || $username === '' || $email === '' || $senha === '') {
-    echo json_encode(["status"=>"n","mensagem"=>"Erro ao descriptografar campos."]);
+    echo json_encode(["status" => "n", "mensagem" => "Erro ao descriptografar campos."]);
     exit;
 }
 

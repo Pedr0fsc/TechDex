@@ -81,10 +81,17 @@ function cadastrar_usuario($nome, $username, $email, $senha)
     return $resultado;
 }
 
+
+/**
+ * Faz login do usuário
+ */
 function entrar_usuario($username, $senha)
 {
     global $conection;
-    
+
+    // ⚠️ Usa o mesmo hash SHA-256 do cadastro
+    $username_hash = hash('sha256', $username);
+
     $stmt = mysqli_stmt_init($conection);
     $query = "SELECT * FROM usuario WHERE username = ?";
     if (!mysqli_stmt_prepare($stmt, $query)) {
@@ -104,15 +111,9 @@ function entrar_usuario($username, $senha)
                 "usuario" => $usuario
             ];
         } else {
-            return [
-                "status" => "n",
-                "mensagem" => "Senha incorreta!"
-            ];
+            return ["status" => "n", "mensagem" => "Senha incorreta!"];
         }
     } else {
-        return [
-            "status" => "n",
-            "mensagem" => "Usuário não encontrado!"
-        ];
+        return ["status" => "n", "mensagem" => "Usuário não encontrado!"];
     }
 }

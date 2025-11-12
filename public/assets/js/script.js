@@ -40,15 +40,16 @@ async function cadastrar() {
 
     if (dados.status === "s") {
         window.location.href = "/TechDex/app/views/login.php";
+        window.location.href = "/TechDex/app/views/login.php";
     } else {
         campo_retorno.textContent = dados.mensagem;
         campo_retorno.style.color = "red";
         form.reset();
+        form.reset();
     }
 }
-
+// LOGIN
 async function entrar() {
-
     var form = document.getElementById("form-login");
     var form_data = new FormData(form);
 
@@ -71,5 +72,6 @@ async function entrar() {
         window.location.href = "/TechDex/app/views/home.php";
     } else {
         campo_retorno.textContent = dados.mensagem;
+        form.reset();
     }
 }

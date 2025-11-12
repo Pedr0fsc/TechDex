@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background: #1e0028;
+  background: linear-gradient(
+    135deg,
+    rgba(30, 0, 40, 1) 38%,
+    rgba(106, 7, 163, 1) 76%
+  );
+  min-height: 100vh;
+  color: #fff;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 100px;
+  position: relative;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo i {
+  font-size: 32px;
+  color: #ffde4d;
+}
+
+.logo p {
+  font-size: 28px;
+  color: #ffde4d;
+  font-weight: 800;
+}
+
+.login {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.login .menu {
+  position: relative;
+}
+
+.login .botao-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s;
+  backdrop-filter: blur(10px);
+  font-size: 16px;
+}
+
+.login .botao-user:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.login .estrutura-menu {
+  position: absolute;
+  top: 120%;
+  right: 0;
+  background: rgba(30, 0, 40, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: 15px;
+  padding: 10px;
+  min-width: 180px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.login .menu:hover .estrutura-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.login .estrutura-menu a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 15px;
+  border-radius: 10px;
+  transition: all 0.3s;
+  color: #fff;
+  text-decoration: none;
+}
+
+.login .estrutura-menu a:hover {
+  background: rgba(255, 222, 77, 0.2);
+  color: #ffde4d;
+}
+
+.welcome {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 100px;
+  gap: 60px;
+  min-height: calc(100vh - 100px);
+}
+
+.welcome-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.welcome-content h1 {
+  font-size: 56px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, #fff, #ffde4d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 2px;
+}
+
+.welcome-content .texto-1 {
+  font-size: 18px;
+  opacity: 0.9;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.welcome-content .texto-2 {
+  font-size: 20px;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+.welcome-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.botao {
+  padding: 15px 35px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+}
+
+.comecar {
+  background: linear-gradient(to right, #ffd000, #ffa127);
+  color: #000;
+}
+
+.comecar:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(255, 208, 0, 0.4);
+}
+
+.imagem {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagem i {
+  font-size: 300px;
+  color: rgba(255, 222, 77, 0.2);
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}

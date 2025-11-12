@@ -19,3 +19,4 @@ function buscar_itens()
     $resultado = mysqli_query($conection, $query);
     return mysqli_fetch_all($resultado, MYSQLI_ASSOC);
 }
+?>
